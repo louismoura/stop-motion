@@ -2,8 +2,8 @@
 Stop motion camera
 
 #### What is "Stop Motion"?
-![example](https://i.hizliresim.com/bBqzYY.gif)  
-![example](https://i.hizliresim.com/kO4NJ7.gif)  
-![example](https://i.hizliresim.com/0EvMLD.gif)  
+![example](examples/gif1.gif)  
+![example](examples/gif2.gif)  
+![example](examples/gif3.gif)  
 
-**examples picked from internet
+**examples picked up from internet
