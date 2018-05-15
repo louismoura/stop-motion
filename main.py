@@ -18,7 +18,7 @@ class VideoStream:
         return frame
 
 class StopMotionCamera:
-    def __init__(self, src=0, fps=6, output=None):
+    def __init__(self, src=0, fps=5, output=None):
         self.stream = VideoStream(src)
 
         self.fps = float(fps)
@@ -64,5 +64,13 @@ class StopMotionCamera:
                 sys.exit()
 
 if __name__ == '__main__':
-    app = StopMotionCamera()
+    parser = argparse.ArgumentParser(description='Stop motion camera implementation')
+
+    parser.add_argument('-s', '--source', dest='src', help='Video stream source, default: 0', default=0)
+    parser.add_argument('-f', '--fps', dest='fps', help='Frame per second (FPS), default: 15', default=15, type=int)
+    parser.add_argument('-o', '--output', dest='output', help='Output name of recorded video', type=str)
+
+    args = parser.parse_args()
+
+    app = StopMotionCamera(**vars(args))
     app.main()
